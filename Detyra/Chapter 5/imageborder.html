@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.10:imageborder.html-->
+<!-- Stretching and repeating an image to create a border. -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Image Boreder</title>
+		<style type="text/css">
+			div
+			{
+				border-width: 30px;
+				width: 234px;
+				padding: 20px 20px;
+			}
+			#stretch{
+				-webkit-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 18 18 18 18 stretch;
+				-moz-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 18 18 18 18 stretch;
+				-o-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 18 18 18 18 stretch;
+				border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 18,18, 18, 18 stretch;
+			}
+			#repeat{
+				-webkit-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 31% 31% repeat;
+				-moz-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 31% 31% repeat;
+				-o-border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 31% 31% repeat;
+				border-image: url(https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png) 31%, 31%, repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="goBack()">Go Back</button>
+
+
+		<script>
+		function goBack() {
+		window.history.back();
+		}
+		</script>
+		<h2>Image Borders</h2>
+		<img src="https://i.pinimg.com/originals/14/32/83/1432834e16f0674984e17b9612af207e.png" width="160" height="160" alt="image used to demonstrate borders">
+		<p><div id="stretch">Stretching the image border</div></p>
+		<p><div id="repeat">Repeating the image border</div></p>
+	</body>
+</html>

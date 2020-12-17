@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.14:meltingimages.html -->
+<!-- Melting one image into another using CSS3 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Melting Images</title>
+		<style type="text/css">
+			#cover
+			{
+				position: relative;
+				margin : 0 auto;
+			}
+			#cover img
+			{
+				position: absolute;
+				left: 0;
+				-webkit-transition: opacity 4s ease-in-out;
+				transition: opacity 4s ease-in-out;
+			}
+			#cover img.top:hover
+				{opacity: 0;}
+		</style>
+	</head>
+	<body>
+		<button onclick="goBack()">Go Back</button>
+
+
+		<script>
+		function goBack() {
+		window.history.back();
+		}
+		</script>
+		<div id="cover">
+			<img class="bottom" src="https://images-na.ssl-images-amazon.com/images/I/41Nmp-lOOXL._SX379_BO1,204,203,200_.jpg" alt="Java">
+			<img class="top" src="https://i.pinimg.com/originals/d9/03/0c/d9030c3164d89be0ef394879108b7f17.jpg" alt="Java">
+		</div>	
+	</body>
+</html>
