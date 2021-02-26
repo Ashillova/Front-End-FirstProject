@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class average program: Sentinel-controlled Repetition</title>
+	<script>
+		
+		var total; // sum of grades
+		var gradecounter; // number of grades entered
+		var grade; // grade typed user (as a string)
+		var gradevalue; // grade value (converted to integer)
+		var average; // average of all grades
+
+		// initialization phase
+		total = 0; // clear total
+		gradecounter = 0; // prepare to loop
+
+		// processing phase
+		// prompt for input and read grade from user
+		grade = window.prompt(
+			"Enter integer grade, -1 to Quit:", "0" );
+
+			// convert grade from a string to an integer
+			gradevalue = parseInt( grade );
+
+			while ( gradevalue != -1 ) 
+		{
+
+			// add gradevalue to total 
+			total = total + gradevalue
+
+			// add 1 to gradecounter
+			gradecounter = gradecounter + 1;
+
+			// promt for input and read grade from user
+			grade = window.promt(
+				"Enter integer grade, -1 to Quit:", "0" );
+
+			// convert grade from a string to an integer
+			gradevalue = parseInt( grade );
+		} // end while
+
+		// termination phase 
+		if ( gradecounter != 0 )
+		 {
+		 	average = total / gradecounter;
+
+		 	// display average of exam grades
+		 	document.writeln(
+		 		"<h1>Class average is " + average + "</h1>" );
+		}	// end if
+
+		else
+		document.writeln( "<p>No grades were entered</p>" );
+
+	</script>
+</head><body>
+	<button onclick="goBack()">Go Back</button>
+
+<script>
+function goBack() {
+	window.history.back();
+}
+</script>
+</body>
+</html>
